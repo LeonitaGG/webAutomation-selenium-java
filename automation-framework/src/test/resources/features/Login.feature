@@ -2,9 +2,6 @@
 
 Feature: Webdriver University - Validate login flow
 
-  //can use the "Background" keyword to group steps that occur in multiple steps -
-  //helps to simplify tests, and avoid duplication
-
   Background:
     Given I access the webdriver university login portal page
 
