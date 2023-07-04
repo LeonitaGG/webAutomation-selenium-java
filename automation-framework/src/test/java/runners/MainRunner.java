@@ -10,7 +10,6 @@ import org.testng.annotations.DataProvider;
 //plugin section allows us to output the code in a tidy report
 
 public class MainRunner extends AbstractTestNGCucumberTests {
-//by extending the TestNG plugin above, allows us to run tests in parallel by inputting the code below
 
     @Override
     @DataProvider(parallel = true)
