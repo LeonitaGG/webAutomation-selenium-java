@@ -15,7 +15,7 @@ import static driver.DriverFactory.getDriver;
 //Centralised class for @Before & @After Hooks, so they don't have to be included in every test class
 public class Hooks
 {
-    @Before /*seems similar to setup method in Unity tests*/
+    @Before
     public void setup()
     {
         getDriver();
@@ -28,7 +28,7 @@ public class Hooks
         if(scenario.isFailed())
         {
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            String timeMilliseconds = Long.toString(timestamp.getTime()); //need to convert the timestamp to a string
+            String timeMilliseconds = Long.toString(timestamp.getTime());
 
             byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", timeMilliseconds);
